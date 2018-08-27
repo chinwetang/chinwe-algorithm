@@ -1,0 +1,34 @@
+ext {
+
+    android = [
+            compileSdkVersion: 28,
+//            buildToolsVersion: "23.0.3",
+            minSdkVersion    : 15,
+            targetSdkVersion : 28,
+            versionCode      : 1,
+            versionName      : "1.0.0",
+    ]
+
+    version = [
+            appcompatV7Version     : "28.0.0-rc01",
+            espressoCoreVersion    : '3.0.2',
+            junitVersion           : '4.12',
+            runnerVersion          : '1.0.2',
+            constraintLayoutVersion: '1.1.2',
+            butterknifeVersion:'8.4.0',
+
+    ]
+
+    dependencies = [
+            "wxpay"            : 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+',
+            "appcompat-v7"     : "com.android.support:appcompat-v7:${version["appcompatV7Version"]}",
+            "espresso-core"    : "com.android.support.test.espresso:espresso-core:${version["espressoCoreVersion"]}",
+            "junit"            : "junit:junit:${version["junitVersion"]}",
+            "runner"           : "com.android.support.test:runner:${version["runnerVersion"]}",
+            "constraint-layout": "com.android.support.constraint:constraint-layout:${version["constraintLayoutVersion"]}",
+            "butterknife": "com.jakewharton:butterknife:${version["butterknifeVersion"]}",
+            "butterknife-compiler": "com.jakewharton:butterknife-compiler:${version["butterknifeVersion"]}",
+    ]
+
+
+}
