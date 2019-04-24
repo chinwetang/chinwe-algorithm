@@ -1,5 +1,6 @@
 package cn.com.chinwe.algorithm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.dedian_of_two_sorted_arrays:
                 //两个排序数组中位数
-
+                startActivity(new Intent(this, MedianOfTwoSortedArraysActivity.class));
                 break;
         }
     }

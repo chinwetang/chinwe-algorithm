@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <Button
         android:id="@+id/dedian_of_two_sorted_arrays"
         app:layout_constraintTop_toTopOf="parent"
