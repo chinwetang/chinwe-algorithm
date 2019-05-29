@@ -1,5 +1,8 @@
 apply plugin: 'com.android.application'
 
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
 android {
     compileSdkVersion rootProject.ext.android["compileSdkVersion"]
     defaultConfig {
@@ -16,15 +19,4 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
-    androidTestImplementation rootProject.ext.dependencies["espresso-core"]
-    implementation rootProject.ext.dependencies["appcompat-v7"]
-    testImplementation rootProject.ext.dependencies["junit"]
-    implementation rootProject.ext.dependencies["constraint-layout"]
-    androidTestImplementation rootProject.ext.dependencies["runner"]
-    implementation rootProject.ext.dependencies["butterknife"]
-    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
 }
