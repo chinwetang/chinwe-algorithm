@@ -27,7 +27,7 @@ package oa.bluemoon.com.cn.lib_java;
  * 输入: 4
  * 输出: "1211"
  */
-public class _038_Count_and_Say {
+public class _0038_Count_and_Say {
     public static void main(String[] args) {
 
     }

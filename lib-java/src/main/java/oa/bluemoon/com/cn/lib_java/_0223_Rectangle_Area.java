@@ -1,8 +1,6 @@
 package oa.bluemoon.com.cn.lib_java;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * 在二维平面上计算出两个由直线构成的矩形重叠后形成的总面积。
@@ -17,10 +15,10 @@ import java.util.List;
  * 输出: 45
  * 说明: 假设矩形面积不会超出 int 的范围。
  */
-public class _223_Rectangle_Area {
+public class _0223_Rectangle_Area {
 
     public static void main(String[] args) {
-        System.out.print(new _223_Rectangle_Area().computeArea1(-3, 0, 3, 4, 0, -1, 9, 2) + "");
+        System.out.print(new _0223_Rectangle_Area().computeArea1(-3, 0, 3, 4, 0, -1, 9, 2) + "");
     }
 
     public int computeArea1(int A, int B, int C, int D, int E, int F, int G, int H) {

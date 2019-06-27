@@ -25,7 +25,7 @@ package oa.bluemoon.com.cn.lib_java;
  * 会多次调用 sumRegion 方法。
  * 你可以假设 row1 ≤ row2 且 col1 ≤ col2。
  */
-public class _304_Range_Sum_Query_2D_Immutable {
+public class _0304_Range_Sum_Query_2D_Immutable {
 
     public static void main(String[] args) {
         System.out.print(new NumMatrix(new int[][]{{3, 0, 1, 4, 2}, {5, 6, 3, 2, 1}, {1, 2, 0, 1, 5}, {4, 1, 0, 1,

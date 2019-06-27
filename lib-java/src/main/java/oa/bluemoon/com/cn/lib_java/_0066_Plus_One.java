@@ -18,7 +18,7 @@ package oa.bluemoon.com.cn.lib_java;
  * 输出: [4,3,2,2]
  * 解释: 输入数组表示数字 4321。
  */
-public class _066_Plus_One {
+public class _0066_Plus_One {
     public static void main(String[] args) {
 
     }

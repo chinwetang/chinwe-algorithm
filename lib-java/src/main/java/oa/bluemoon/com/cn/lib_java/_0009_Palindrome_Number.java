@@ -21,10 +21,10 @@ package oa.bluemoon.com.cn.lib_java;
  * <p>
  * 你能不将整数转为字符串来解决这个问题吗？
  */
-public class _009_Palindrome_Number {
+public class _0009_Palindrome_Number {
 
     public static void main(String[] args) {
-        System.out.print(new _009_Palindrome_Number().isPalindrome(1) + "");
+        System.out.print(new _0009_Palindrome_Number().isPalindrome(1) + "");
     }
 
     public boolean isPalindrome(int x) {

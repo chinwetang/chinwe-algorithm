@@ -1,10 +1,5 @@
 package oa.bluemoon.com.cn.lib_java;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 /**
  * 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
  * <p>
@@ -31,10 +26,10 @@ import java.util.Map;
  * 输出: 0
  * 解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。
  */
-public class _122_Best_Time_to_Buy_and_Sell_Stock_2 {
+public class _0122_Best_Time_to_Buy_and_Sell_Stock_2 {
 
     public static void main(String[] args) {
-        new _122_Best_Time_to_Buy_and_Sell_Stock_2().maxProfit2(new int[]{7,6,4,3,1});
+        new _0122_Best_Time_to_Buy_and_Sell_Stock_2().maxProfit2(new int[]{7,6,4,3,1});
     }
 
 

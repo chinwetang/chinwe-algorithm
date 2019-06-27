@@ -34,7 +34,7 @@ import java.util.Set;
  * ]
  * 解释: 4 皇后问题存在两个不同的解法。
  */
-public class _051_N_Queens {
+public class _0051_N_Queens {
 
     public static void main(String[] args) {
         new Solution3().solveNQueens(4);

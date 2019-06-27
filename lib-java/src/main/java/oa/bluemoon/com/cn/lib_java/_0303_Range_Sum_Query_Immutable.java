@@ -15,7 +15,7 @@ package oa.bluemoon.com.cn.lib_java;
  * 你可以假设数组不可变。
  * 会多次调用 sumRange 方法。
  */
-public class _303_Range_Sum_Query_Immutable {
+public class _0303_Range_Sum_Query_Immutable {
     public static class NumArray {
         private int[] nums;
 

@@ -29,10 +29,10 @@ import java.util.List;
  * ".Q.."]
  * ]
  */
-public class _052_N_Queens_2 {
+public class _0052_N_Queens_2 {
 
     public static void main(String[] args) {
-        new _052_N_Queens_2().totalNQueens(4);
+        new _0052_N_Queens_2().totalNQueens(4);
     }
 
     int result = 0;

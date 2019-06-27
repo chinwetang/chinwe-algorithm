@@ -32,7 +32,7 @@ import java.util.Map;
  * 输出: 0
  * 解释: 在这个情况下, 没有交易完成, 所以最大利润为 0。
  */
-public class _123_Best_Time_to_Buy_and_Sell_Stock_3 {
+public class _0123_Best_Time_to_Buy_and_Sell_Stock_3 {
 
     public static void main(String[] args) {
 

@@ -22,7 +22,7 @@ package oa.bluemoon.com.cn.lib_java;
  * 进阶：
  * 你能不使用循环或者递归来完成本题吗？
  */
-public class _326_Power_of_Three {
+public class _0326_Power_of_Three {
     public static void main(String[] args) {
 
     }

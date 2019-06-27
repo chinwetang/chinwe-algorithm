@@ -5,9 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class _047_Permutations_2 {
+public class _0047_Permutations_2 {
     public static void main(String[] args) {
-        new _047_Permutations_2().permuteUnique(new int[]{1, 1, 3});
+        new _0047_Permutations_2().permuteUnique(new int[]{1, 1, 3});
     }
 
     public List<List<Integer>> permuteUnique(int[] nums) {

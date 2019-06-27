@@ -19,9 +19,9 @@ package oa.bluemoon.com.cn.lib_java;
  * <p>
  * 假设我们的环境只能存储得下 32 位的有符号整数，则其数值范围为 [−231,  231 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。
  */
-public class _007_Reverse_Integer {
+public class _0007_Reverse_Integer {
     public static void main(String[] args) {
-        System.out.print(new _007_Reverse_Integer().reverse(-123) + "");
+        System.out.print(new _0007_Reverse_Integer().reverse(-123) + "");
     }
 
     public int reverse(int x) {

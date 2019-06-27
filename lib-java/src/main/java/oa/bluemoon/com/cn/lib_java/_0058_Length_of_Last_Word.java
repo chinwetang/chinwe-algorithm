@@ -12,7 +12,7 @@ package oa.bluemoon.com.cn.lib_java;
  * 输入: "Hello World"
  * 输出: 5
  */
-public class _058_Length_of_Last_Word {
+public class _0058_Length_of_Last_Word {
     public static void main(String[] args) {
     }
 

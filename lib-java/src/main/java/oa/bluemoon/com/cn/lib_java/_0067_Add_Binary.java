@@ -14,7 +14,7 @@ package oa.bluemoon.com.cn.lib_java;
  * 输入: a = "1010", b = "1011"
  * 输出: "10101"
  */
-public class _067_Add_Binary {
+public class _0067_Add_Binary {
     public static void main(String[] args) {
 
     }

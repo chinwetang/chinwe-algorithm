@@ -19,9 +19,9 @@ import java.util.List;
  * [3,2,1]
  * ]
  */
-public class _046_Permutations {
+public class _0046_Permutations {
     public static void main(String[] args) {
-        new _046_Permutations().permute(new int[]{1, 2, 3});
+        new _0046_Permutations().permute(new int[]{1, 2, 3});
     }
 
 

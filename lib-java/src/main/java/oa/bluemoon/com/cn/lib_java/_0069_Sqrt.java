@@ -18,7 +18,7 @@ package oa.bluemoon.com.cn.lib_java;
  * 说明: 8 的平方根是 2.82842...,
  * 由于返回类型是整数，小数部分将被舍去。
  */
-public class _069_Sqrt {
+public class _0069_Sqrt {
 
     public static void main(String[] args) {
         new Solution().mySqrt(8);

@@ -1,6 +1,5 @@
 package oa.bluemoon.com.cn.lib_java;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,9 +15,9 @@ import java.util.Map;
  * 因为 nums[0] + nums[1] = 2 + 7 = 9
  * 所以返回 [0, 1]
  */
-public class _001_Two_Sum {
+public class _0001_Two_Sum {
     public static void main(String[] args) {
-        int[] result = new _001_Two_Sum().twoSum(new int[]{2, 7, 11, 15}, 9);
+        int[] result = new _0001_Two_Sum().twoSum(new int[]{2, 7, 11, 15}, 9);
         System.out.print(result[0] + "" + result[1]);
     }
 

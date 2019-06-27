@@ -20,7 +20,7 @@ package oa.bluemoon.com.cn.lib_java;
  *
  * 则中位数是 (2 + 3)/2 = 2.5
  */
-public class _004_Median_of_Two_Sorted_Arrays {
+public class _0004_Median_of_Two_Sorted_Arrays {
     public static void main(String[] args) {
 
     }

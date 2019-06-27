@@ -23,7 +23,7 @@ package oa.bluemoon.com.cn.lib_java;
  * 2.  1 阶 + 2 阶
  * 3.  2 阶 + 1 阶
  */
-public class _070_Climbing_Stairs {
+public class _0070_Climbing_Stairs {
 
     public static void main(String[] args) {
         new Solution().climbStairs(3);

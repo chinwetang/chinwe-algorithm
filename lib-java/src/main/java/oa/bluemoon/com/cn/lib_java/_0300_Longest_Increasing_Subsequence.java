@@ -20,10 +20,10 @@ import java.util.Map;
  * 你算法的时间复杂度应该为 O(n2) 。
  * 进阶: 你能将算法的时间复杂度降低到 O(n log n) 吗?
  */
-public class _300_Longest_Increasing_Subsequence {
+public class _0300_Longest_Increasing_Subsequence {
 
     public static void main(String[] args) {
-        new _300_Longest_Increasing_Subsequence().lengthOfLIS4(new int[]{10, 22, 9, 33, 21, 50,
+        new _0300_Longest_Increasing_Subsequence().lengthOfLIS4(new int[]{10, 22, 9, 33, 21, 50,
                 41, 60, 80});
     }
 

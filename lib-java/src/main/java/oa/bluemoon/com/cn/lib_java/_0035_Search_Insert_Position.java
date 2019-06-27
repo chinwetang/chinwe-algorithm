@@ -22,10 +22,10 @@ package oa.bluemoon.com.cn.lib_java;
  * 输入: [1,3,5,6], 0
  * 输出: 0
  */
-public class _035_Search_Insert_Position {
+public class _0035_Search_Insert_Position {
 
     public static void main(String[] args) {
-        System.out.print(new _035_Search_Insert_Position().searchInsert(new int[]{1, 3, 5, 6}, 2));
+        System.out.print(new _0035_Search_Insert_Position().searchInsert(new int[]{1, 3, 5, 6}, 2));
     }
 
 
