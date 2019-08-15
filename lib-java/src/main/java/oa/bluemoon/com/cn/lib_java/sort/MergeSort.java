@@ -1,12 +1,14 @@
 package oa.bluemoon.com.cn.lib_java.sort;
 
+import java.util.LinkedList;
+
 public class MergeSort {
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 5, 3, 8, 4, 0, 3, 78, 21, 65, 32, 84, 2, 4};
-        int[] result=new MergeSort().sort(nums);
-        for (int i = 0; i < result.length; i++) {
-            System.out.print(result[i] + ",");
+        int[] nums = new int[]{45, 6, 45, 1, 5, 3, 8, 4, 0, 3, 78, 21, 65, 32, 84, 2, 4};
+        new MergeSort().mergeSortBU(nums, nums.length);
+        for (int i = 0; i < nums.length; i++) {
+            System.out.print(nums[i] + ",");
         }
     }
 
@@ -41,6 +43,35 @@ public class MergeSort {
             }
         }
         return results;
+    }
+
+
+    public void mergeSortBU(int[] nums, int n) {
+        for (int sz = 1; sz <= n; sz += sz) {
+            for (int i = 0; i + sz < n; i += sz + sz) {
+                _merge(nums, i, i + sz - 1, Math.min(i + sz + sz - 1, n - 1));
+            }
+        }
+
+    }
+
+    private void _merge(int[] nums, int start, int middle, int end) {
+        int[] temp = new int[end - start + 1];
+        int left = start, right = middle + 1;
+        for (int i = start; i <= end; i++) {
+            if (left > middle) {
+                temp[i - start] = nums[right++];
+            } else if (right > end) {
+                temp[i - start] = nums[left++];
+            } else if (nums[left] < nums[right]) {
+                temp[i - start] = nums[left++];
+            } else {
+                temp[i - start] = nums[right++];
+            }
+        }
+        for (int i = 0; i < temp.length; i++) {
+            nums[start + i] = temp[i];
+        }
     }
 
 }
