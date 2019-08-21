@@ -21,10 +21,6 @@ package oa.bluemoon.com.cn.lib_java;
  */
 public class _0029_Divide_Two_Integers {
 
-    public static void main(String[] args) {
-
-    }
-
     /**
      * 超时间限制
      *
@@ -62,29 +58,46 @@ public class _0029_Divide_Two_Integers {
     }
 
 
-    public int divide2(int dividend, int divisor) {
+    public static void main(String[] args) {
 
-        if(dividend==Integer.MIN_VALUE&&divisor==-1)
-            return Integer.MAX_VALUE;
-        if (!meet(dividend,divisor))
-            return 0;
-        if(Math.abs(divisor)==1)
-            return dividend;
-        int dr = divisor;
-        int increase = dividend > 0 ^ divisor < 0 ? 1 : -1;
-        for (; meet(dividend,dr << 1); dr <<= 1,
-                increase <<= 1)
-            ;
-        return increase + divide2(dividend > 0 ^ divisor < 0 ? (dividend - dr) : (dividend + dr),
-                divisor);
+        System.out.print(new Solution().divide(-7,
+                -3));
     }
 
-    public boolean meet(int dividend, int divisor){
-        if(dividend==Integer.MIN_VALUE)
-            return true;
-        else if(divisor==Integer.MIN_VALUE)
-            return false;
-        else
-           return Math.abs(dividend) >= Math.abs(divisor);
+    static class Solution {
+        public int divide(int dividend, int divisor) {
+            if (dividend == divisor) {
+                return 1;
+            }
+            if (divisor == -2147483648||dividend==0) {
+                return 0;
+            }
+            int res = dividend >>> 31 ^ divisor >>> 31;
+            dividend = Math.abs(dividend + (res == 1 ? 1 : -1) * divisor);
+            divisor = Math.abs(divisor);
+            int result = 1;
+            if(dividend==0)
+                return result;
+            if (dividend < divisor) {
+                result--;
+            }
+            while (dividend >= divisor) {
+                for (int i = 1; ; i++) {
+                    if (divisor << i > dividend) {
+                        int old = result;
+                        int pow = (int) Math.pow(2, i - 1);
+                        result += pow;
+                        if (result - pow != old) {
+                            return 2147483647;
+                        }
+                        dividend -= divisor << (i - 1);
+                        break;
+                    }
+                }
+            }
+            return result * (res == 1 ? -1 : 1);
+        }
+
+
     }
 }

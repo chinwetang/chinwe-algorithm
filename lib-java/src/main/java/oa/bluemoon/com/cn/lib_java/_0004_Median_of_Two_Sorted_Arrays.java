@@ -25,13 +25,9 @@ public class _0004_Median_of_Two_Sorted_Arrays {
 
     }
 
-//    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-//        if (nums1.length == 0) {
-//            return (nums2[(nums2.length + 1) / 2] + nums2[nums2.length / 2]) / 2d;
-//        }
-//        if (nums2.length == 0) {
-//            return (nums1[(nums1.length + 1) / 2] + nums1[nums1.length / 2]) / 2d;
-//        }
+    class Solution {
+//        public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 //
-//    }
+//        }
+    }
 }
