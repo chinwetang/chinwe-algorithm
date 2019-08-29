@@ -30,15 +30,15 @@ public class _0206_Reverse_Linked_List {
 
     class Solution {
         public ListNode reverseList(ListNode head) {
-            ListNode node1 = null;
-            ListNode node2 = head;
-            while (node2 != null) {
-                ListNode node3 = node2.next;
-                node2.next = node1;
-                node1 = node2;
-                node2 = node3;
+            ListNode newHead = null;
+            ListNode node = head;
+            while (node != null) {
+                ListNode temp = node;
+                node=node.next;
+                temp.next=newHead;
+                newHead=temp;
             }
-            return node1;
+            return newHead;
         }
     }
 
