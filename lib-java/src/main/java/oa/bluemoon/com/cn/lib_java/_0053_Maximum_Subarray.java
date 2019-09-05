@@ -19,17 +19,16 @@ public class _0053_Maximum_Subarray {
     }
 
     public int maxSubArray(int[] nums) {
-        int[] sums = new int[nums.length];
-        sums[0] = nums[0];
-        int maxSum=sums[0];
-        for (int i = 1; i < nums.length; i++) {
-            if(sums[i-1]>0){
-                sums[i]=sums[i-1]+nums[i];
-            }else{
-                sums[i]=nums[i];
+        int result = nums[0];
+        int sum = 0;
+        for (int num : nums) {
+            if (sum > 0) {
+                sum += num;
+            } else {
+                sum = num;
             }
-            maxSum=Math.max(maxSum,sums[i]);
+            result = Math.max(sum, result);
         }
-        return maxSum;
+        return result;
     }
 }

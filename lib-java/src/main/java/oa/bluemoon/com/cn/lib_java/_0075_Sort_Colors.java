@@ -44,4 +44,26 @@ public class _0075_Sort_Colors {
         }
 
     }
+
+    static class Solution2 {
+        public void sortColors(int[] nums) {
+            int red = -1, blue = nums.length;
+            for (int i = 0; i < nums.length; ) {
+                if (nums[i] == 0 && i > red) {
+                    ++red;
+                    nums[i] = nums[red];
+                    nums[red] = 0;
+                } else if (i >= blue) {
+                    break;
+                } else if (nums[i] == 2) {
+                    --blue;
+                    nums[i] = nums[blue];
+                    nums[blue] = 2;
+                } else {
+                    i++;
+                }
+            }
+        }
+
+    }
 }
