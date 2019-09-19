@@ -2,8 +2,10 @@ package oa.bluemoon.com.cn.lib_java;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Queue;
 
 /**
  * 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
@@ -26,8 +28,60 @@ import java.util.Map;
  */
 public class _0121_Best_Time_to_Buy_and_Sell_Stock {
 
+    static class Solution {
+
+        public static void main(String[] args) {
+            System.out.println(new Solution().maxProfit(new int[]{2, 1, 2, 1, 0, 1, 2}));
+        }
+
+        public int maxProfit(int[] prices) {
+            Queue<Integer> queue = new LinkedList<>();
+            queue.offer(1);
+            int result = 0;
+            for (int i = 0; i < prices.length; i++) {
+                int size = queue.size();
+                for (int j = 0; j < size; j++) {
+                    Integer temp = queue.poll();
+                    if (temp < 1 && (i == prices.length - 1 || prices[i] > prices[i + 1]) && temp + prices[i] > 0) {
+                        //卖
+                        result = Math.max(temp + prices[i], result);
+                    }
+                    if (temp == 1 && i < prices.length - 1 && prices[i] < prices[i + 1]) {
+                        //买
+                        queue.offer(-prices[i]);
+                    }
+                    //原地不动，不买不卖
+                    queue.offer(temp);
+                }
+            }
+            return result;
+        }
+    }
+
+    static class Solution2 {
+
+        public static void main(String[] args) {
+            System.out.println(new Solution2().maxProfit(new int[]{7, 1, 5, 3, 6, 4}));
+        }
+
+        public int maxProfit(int[] prices) {
+            int min = -1, resMax = 0;
+            for (int i = 0; i < prices.length; i++) {
+                if (i < prices.length - 1 && prices[i] < prices[i + 1] && (i == 0 || prices[i] <= prices[i - 1])) {
+                    //谷底
+                    min = min < 0 ? prices[i] : Math.min(prices[i], min);
+                }
+                if (min >= 0 && i > 0 && prices[i] > prices[i - 1] && (i == prices.length - 1 || prices[i] >= prices[i + 1])) {
+                    //找到谷底之后的峰顶
+                    resMax = Math.max(resMax, prices[i] - min);
+                }
+            }
+            return resMax;
+        }
+    }
+
     public static void main(String[] args) {
-        new _0121_Best_Time_to_Buy_and_Sell_Stock().maxProfit(new int[]{1,4,2});
+        new _0121_Best_Time_to_Buy_and_Sell_Stock().maxProfit(new int[]{1, 4, 2});
     }
 
     public int maxProfit(int[] prices) {

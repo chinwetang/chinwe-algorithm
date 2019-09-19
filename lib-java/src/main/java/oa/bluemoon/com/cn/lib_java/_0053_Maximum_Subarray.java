@@ -22,11 +22,7 @@ public class _0053_Maximum_Subarray {
         int result = nums[0];
         int sum = 0;
         for (int num : nums) {
-            if (sum > 0) {
-                sum += num;
-            } else {
-                sum = num;
-            }
+            sum = num + Math.max(sum, 0);
             result = Math.max(sum, result);
         }
         return result;

@@ -1,5 +1,7 @@
 package oa.bluemoon.com.cn.lib_java;
 
+import java.util.Arrays;
+
 /**
  * 给定两个单词 word1 和 word2，计算出将 word1 转换成 word2 所使用的最少操作数 。
  * <p>
@@ -33,6 +35,9 @@ package oa.bluemoon.com.cn.lib_java;
  */
 public class _0072_Edit_Distance {
 
+    /**
+     * 动态规划-状态转移方程
+     */
     static class Solution {
         public int minDistance(String word1, String word2) {
 
@@ -61,4 +66,6 @@ public class _0072_Edit_Distance {
             return words[word1.length()][word2.length()];
         }
     }
+
+
 }
