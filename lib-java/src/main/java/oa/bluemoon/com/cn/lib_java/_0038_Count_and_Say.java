@@ -32,28 +32,34 @@ public class _0038_Count_and_Say {
 
     }
 
-    public String countAndSay(int n) {
-        String result = "1";
-        StringBuffer buffer = new StringBuffer();
-
-        for (int i = 2; i <= n; i++) {
-            char c = ' ';
-            int num = 0;
-            for (int j = 0; j <= result.length(); j++) {
-                if (j == result.length()|| result.charAt(j) != c) {
-                    if (num > 0) {
-                        buffer.append(num).append(c);
-                    }
-                    if(j < result.length())
-                    c = result.charAt(j);
-                    num = 1;
-                } else {
-                    num++;
-                }
-            }
-            result = buffer.toString();
-            buffer.delete(0, result.length());
+    static class Solution {
+        public static void main(String[] args) {
+            System.out.println(new Solution().countAndSay(40));
         }
-        return result;
+
+        public String countAndSay(int n) {
+            String result = "1";
+            StringBuffer buffer = new StringBuffer();
+
+            for (int i = 2; i <= n; i++) {
+                char c = ' ';
+                int num = 0;
+                for (int j = 0; j <= result.length(); j++) {
+                    if (j == result.length() || result.charAt(j) != c) {
+                        if (num > 0) {
+                            buffer.append(num).append(c);
+                        }
+                        if (j < result.length())
+                            c = result.charAt(j);
+                        num = 1;
+                    } else {
+                        num++;
+                    }
+                }
+                result = buffer.toString();
+                buffer.delete(0, result.length());
+            }
+            return result;
+        }
     }
 }

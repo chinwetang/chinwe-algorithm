@@ -63,18 +63,18 @@ public class _0416_Partition_Equal_Subset_Sum {
 
 
     static class Solution2 {
-        public boolean canPartition(int[] nums) {
-            int sum = 0;
-            int[] counts = new int[101];
-            for (int i : nums) {
-                counts[i]++;
-                sum += i;
-            }
-            if (sum % 2 == 1)
-                return false;
-            int left = 0, right = 0;
-
-        }
+//        public boolean canPartition(int[] nums) {
+//            int sum = 0;
+//            int[] counts = new int[101];
+//            for (int i : nums) {
+//                counts[i]++;
+//                sum += i;
+//            }
+//            if (sum % 2 == 1)
+//                return false;
+//            int left = 0, right = 0;
+//
+//        }
 
     }
 
